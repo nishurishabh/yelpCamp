@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="container text-center">
+    <h1 class="display-4">Add a new Camground</h1>
+
+    <div class="container" style="width: 50%; margin:2% auto">
+        <form action="/campgrounds" method="POST">
+            <div class="form-group">
+                <input type="name" class="form-control" aria-describedby="emailHelp" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Image URL" name="image"">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Description" name="description"">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    <a href="/campgrounds">Back to campgrounds</a>
+    <div><% include partials/footer %></div>
+</div>
+
+
+    

@@ -1,0 +1,30 @@
+<% include partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to letsCamp</h1>
+            <p>The best site to book camp trips</p>
+            <p>
+                <a class="btn btn-success btn-large" href="/campgrounds/new"> Add a camground </a>
+            </p>
+        </div>  
+    </header>
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(c) { %>
+            <div class="col-md-4 col-sm-6">
+                <figure class="figure">
+                    <img src="<%=c.image %>"  class="figure-img img-fluid rounded" >
+                    <figcaption class="figure-caption">
+                        <h4><%= c.name%></h4>
+                    </figcaption>
+                </figure>
+                <p> <a class="btn btn-primary" href="/campgrounds/<%=c._id%>"> More info </a></p>
+            </div>
+        <%}); %>
+    </div>
+    
+</div>
+
+
+
+<% include partials/footer %>
